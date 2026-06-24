@@ -488,7 +488,7 @@ function setAuthMode(mode) {
   document.querySelector("#showRegister").classList.toggle("active", isRegister);
   document.querySelector("#authSubmit").innerHTML = isRegister ? "创建账号 <span>→</span>" : "登录 <span>→</span>";
   document.querySelector("#authNote").textContent = isRegister
-    ? "云端模式支持邮箱注册；如果输入玩家名，请在 Supabase 关闭邮箱确认。"
+    ? "可以直接输入玩家名注册；也可以输入邮箱注册。"
     : "登录后会切换到该玩家的独立练习记录、游戏最高分和全站排行榜。";
   document.querySelector("#authPassword").autocomplete = isRegister ? "new-password" : "current-password";
 }
