@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f0e8">
-  <!-- SINGLE_FILE_COMPACT_V7_REDEPLOY --><title>键途 KeyPath — 从小白到打字高手</title>
+  <!-- SINGLE_FILE_COMPACT_V8_KEYBOARD_TARGETS --><title>键途 KeyPath — 从小白到打字高手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -399,7 +399,9 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
   min-width: 0;
 }
 #practiceModal .virtual-keyboard {
-  display: none !important;
+  display: block !important;
+  max-width: 100%;
+  overflow: hidden;
 }
 @keyframes panelIn { from { opacity: 0; transform: translateY(20px) scale(.98); } }
 .practice-header { display: flex; justify-content: space-between; align-items: start; border-bottom: 1px solid var(--line); padding-bottom: 14px; }
@@ -424,11 +426,13 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
 @keyframes blink { 50% { border-color: transparent; } }
 #typingInput { width: 1px; height: 1px; opacity: 0; position: absolute; left: 0; top: 0; pointer-events: none; }
 .input-hint { color: var(--muted); font-size: 11px; margin: 12px 0 0; text-align: center; }
-.virtual-keyboard { display: none; }
-.key-row { display: flex; justify-content: center; gap: 5px; margin-bottom: 5px; }
-.key { width: clamp(24px, 4.5vw, 36px); height: 36px; display: grid; place-items: center; border: 1px solid #c9c1b5; border-bottom-width: 3px; border-radius: 4px; background: white; font: 500 10px "DM Mono"; transition: .08s; }
+.virtual-keyboard { display: block; width: 100%; margin: 12px auto 6px; max-width: 520px; overflow: hidden; }
+.key-row { display: flex; justify-content: center; gap: 4px; margin-bottom: 4px; min-width: 0; }
+.key { flex: 0 1 32px; width: clamp(20px, 4.1vw, 32px); height: 30px; display: grid; place-items: center; border: 1px solid #c9c1b5; border-bottom-width: 3px; border-radius: 4px; background: white; font: 500 9px "DM Mono"; transition: .08s; }
 .key.active { background: var(--orange); color: white; border-color: #c5542d; transform: translateY(2px); border-bottom-width: 1px; }
-.key.space { width: min(190px, 42vw); }
+.key.target-key { background: rgba(239,107,58,.14); border-color: var(--orange); color: var(--ink); box-shadow: inset 0 -2px 0 rgba(239,107,58,.3); }
+.key.target-key.active { background: var(--orange); color: white; }
+.key.space { flex-basis: min(190px, 42vw); width: min(190px, 42vw); }
 .practice-actions { min-height: 44px; margin-top: 12px; display: flex; justify-content: space-between; align-items: center; }
 .toast { position: fixed; left: 50%; bottom: 25px; z-index: 100; transform: translate(-50%, 20px); background: var(--ink); color: white; padding: 12px 18px; border-radius: 4px; font-size: 12px; opacity: 0; pointer-events: none; transition: .25s; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
@@ -568,10 +572,10 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
   .typing-area { padding: 13px; }
   .typing-text { min-height: 64px; max-height: 120px; font-size: 17px; line-height: 1.45; }
   .input-hint { margin-top: 8px; }
-  .virtual-keyboard { display: none !important; margin: 12px auto 6px; }
-  .key { width: 28px; height: 32px; font-size: 9px; }
+  .virtual-keyboard { display: block !important; margin: 10px auto 5px; }
+  .key { flex-basis: 23px; width: 23px; height: 30px; font-size: 8px; }
   .key-row { gap: 3px; }
-  .key.space { width: 150px; }
+  .key.space { flex-basis: 140px; width: 140px; }
   .game-topbar { grid-template-columns: 1fr 30px; padding: 15px; }
   .game-hud { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; text-align: left; gap: 10px; }
   .game-arena { height: 55vh; }
@@ -586,7 +590,7 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
   .live-stats div { padding: 8px; }
   .typing-area { padding: 14px; }
   .typing-text { min-height: 58px; max-height: 105px; font-size: 19px; line-height: 1.45; }
-  .virtual-keyboard { display: none !important; margin: 10px auto 4px; }
+  .virtual-keyboard { display: block !important; margin: 8px auto 4px; }
   .key { width: 31px; height: 31px; font-size: 9px; }
   .key-row { gap: 4px; margin-bottom: 4px; }
   .key.space { width: 170px; }
@@ -937,13 +941,14 @@ const courses = {
     { icon: "A—Z", title: "字母大集合", desc: "覆盖全部字母，开始输入完整英文单词。", text: "quick brown fox jumps over the lazy dog", status: "locked" }
   ],
   intermediate: [
-    { icon: "⏱", title: "速度热身", desc: "用短词组建立稳定节拍，突破 40 WPM。", text: "time and tide wait for no one keep moving", status: "open" },
-    { icon: "，。", title: "中文标点", desc: "练习常用标点与中英文符号切换。", text: "学习，不只是抵达；也是一路发现。", status: "open" },
-    { icon: "Aa", title: "大小写切换", desc: "熟练使用 Shift，保持节奏不被打断。", text: "Practice Makes Progress Every Single Day", status: "open" },
-    { icon: "123", title: "数字与符号", desc: "掌握数字行和工作中的常用特殊字符。", text: "2026 goal: accuracy > 96% & speed > 60", status: "locked" }
+    { icon: "⏱", title: "English speed warm-up", desc: "只练英文单词与空格，建立稳定节拍。", text: "time and tide wait for no one keep moving", keys: "timeanddhewfornkpgv", status: "open" },
+    { icon: ".,!?", title: "English punctuation", desc: "练习英文逗号、句号、感叹号、问号、分号与引号。", text: "Hello, world! Keep focus; type well?", keys: "HellowrdKpfcustyp,!.;?", status: "open" },
+    { icon: "Aa", title: "Capital letters", desc: "练习 Shift 与大小写，保持节奏不被打断。", text: "Practice Makes Progress Every Single Day", keys: "PracticeMksogEvrySnlD", status: "open" },
+    { icon: "123", title: "Numbers and symbols", desc: "练习数字行和常用英文符号。", text: "2026 goal: accuracy 96% speed 60 + bonus #12", keys: "2026goalcuraysped+bnus#%1", status: "open" }
   ],
   advanced: [
-    { icon: "</>", title: "代码疾速", desc: "针对括号、缩进和程序符号的专项训练。", text: "const focus = speed => speed * accuracy;", status: "open" },
+    { icon: "F1", title: "Function keys F1-F12", desc: "认识并练习键盘顶部功能键。", text: "F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12", keys: "F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12", status: "open", functionKeyLesson: true },
+    { icon: "</>", title: "Code punctuation", desc: "针对括号、缩进和程序符号的专项训练。", text: "const focus = speed => speed * accuracy;", keys: "constfuedpary=*>;", status: "open" },
     { icon: "稿", title: "长文耐力", desc: "在长时间输入中保持速度和准确率。", text: "Great work is built one thoughtful keystroke at a time.", status: "open" },
     { icon: "⚡", title: "极限冲刺", desc: "短时间高强度训练，冲击个人最高速度。", text: "fast focused fluid fearless forward", status: "open" },
     { icon: "🏆", title: "高手认证", desc: "完成综合测试，获得你的键途高手徽章。", text: "Accuracy builds confidence and confidence builds speed.", status: "locked" }
@@ -965,6 +970,7 @@ let timerInterval = null;
 let mistakes = 0;
 let soundEnabled = true;
 let audioContext;
+let currentTargetKeys = new Set();
 const defaultPlayer = { username: "guest", displayName: "游客" };
 let authMode = "login";
 let currentPlayer = loadCurrentPlayer();
@@ -1255,12 +1261,79 @@ document.querySelectorAll(".level-tab").forEach(tab => {
   });
 });
 
-function renderKeyboard() {
-  const rows = ["QWERTYUIOP", "ASDFGHJKL;", "ZXCVBNM", " "];
+function normalizeKeyName(key) {
+  const aliases = {
+    " ": "Space",
+    "!": "Digit1",
+    "@": "Digit2",
+    "#": "Digit3",
+    "$": "Digit4",
+    "%": "Digit5",
+    "^": "Digit6",
+    "&": "Digit7",
+    "*": "Digit8",
+    "(": "Digit9",
+    ")": "Digit0",
+    "-": "Minus",
+    "_": "Minus",
+    "=": "Equal",
+    "+": "Equal",
+    "[": "BracketLeft",
+    "{": "BracketLeft",
+    "]": "BracketRight",
+    "}": "BracketRight",
+    "\\": "Backslash",
+    "|": "Backslash",
+    ";": "Semicolon",
+    ":": "Semicolon",
+    "'": "Quote",
+    "\"": "Quote",
+    ",": "Comma",
+    "<": "Comma",
+    ".": "Period",
+    ">": "Period",
+    "/": "Slash",
+    "?": "Slash",
+    "`": "Backquote",
+    "~": "Backquote"
+  };
+  if (/^F([1-9]|1[0-2])$/.test(key)) return key;
+  if (/^[0-9]$/.test(key)) return `Digit${key}`;
+  if (/^[a-z]$/i.test(key)) return `Key${key.toUpperCase()}`;
+  return aliases[key] || key;
+}
+
+function targetKeysForCourse(course) {
+  const raw = course.keys || course.text;
+  const functionKeys = raw.match(/F([1-9]|1[0-2])/g) || [];
+  const chars = [...raw].filter(char => !/[F0-9]/.test(char) || !functionKeys.length);
+  return new Set([
+    ...functionKeys,
+    ...chars.map(normalizeKeyName)
+  ].filter(Boolean));
+}
+
+function keyMarkup(key) {
+  const code = normalizeKeyName(key.code || key.label);
+  const classes = ["key", key.size || "", currentTargetKeys.has(code) ? "target-key" : ""].filter(Boolean).join(" ");
+  return `<span class="${classes}" data-key="${code}">${key.label}</span>`;
+}
+
+function renderKeyboard(course = courses[activeLevel][activeCourse]) {
+  currentTargetKeys = targetKeysForCourse(course);
+  const rows = [
+    Array.from({ length: 12 }, (_, i) => ({ label: `F${i + 1}` })),
+    [
+      { label: "`" }, { label: "1" }, { label: "2" }, { label: "3" }, { label: "4" }, { label: "5" },
+      { label: "6" }, { label: "7" }, { label: "8" }, { label: "9" }, { label: "0" }, { label: "-" }, { label: "=" }
+    ],
+    [..."QWERTYUIOP"].map(label => ({ label })).concat([{ label: "[" }, { label: "]" }, { label: "\\" }]),
+    [..."ASDFGHJKL"].map(label => ({ label })).concat([{ label: ";" }, { label: "'" }]),
+    [..."ZXCVBNM"].map(label => ({ label })).concat([{ label: "," }, { label: "." }, { label: "/" }]),
+    [{ label: "SPACE", code: " ", size: "space" }]
+  ];
   keyboard.innerHTML = rows.map(row => `
-    <div class="key-row">${[...row].map(key =>
-      `<span class="key ${key === " " ? "space" : ""}" data-key="${key === " " ? "Space" : key.toUpperCase()}">${key === " " ? "SPACE" : key}</span>`
-    ).join("")}</div>`).join("");
+    <div class="key-row">${row.map(keyMarkup).join("")}</div>`).join("");
 }
 
 function openPractice(level, index) {
@@ -1269,6 +1342,7 @@ function openPractice(level, index) {
   activeCourse = index;
   const course = courses[level][index];
   targetText = course.text;
+  renderKeyboard(course);
   document.querySelector("#practiceLevel").textContent = `${levelNames[level]} · 第 ${index + 1} 课`;
   document.querySelector("#practiceTitle").textContent = course.title;
   modal.classList.add("open");
@@ -1377,7 +1451,7 @@ function playKeySound(isError = false) {
   oscillator.stop(audioContext.currentTime + .05);
 }
 
-typingInput.addEventListener("input", event => {
+function handleTypingChange() {
   if (!startedAt && typingInput.value.length) {
     startedAt = Date.now();
     timerInterval = setInterval(updateStats, 500);
@@ -1390,10 +1464,26 @@ typingInput.addEventListener("input", event => {
   updateStats();
 
   if (typingInput.value.length >= targetText.length) finishPractice();
-});
+}
+
+typingInput.addEventListener("input", handleTypingChange);
 
 typingInput.addEventListener("keydown", event => {
-  const keyName = event.code === "Space" ? "Space" : event.key.toUpperCase();
+  const course = courses[activeLevel][activeCourse];
+  if (course.functionKeyLesson && /^F([1-9]|1[0-2])$/.test(event.key)) {
+    event.preventDefault();
+    const token = `${event.key} `;
+    if (targetText.startsWith(typingInput.value + token) || targetText.startsWith(typingInput.value + event.key)) {
+      typingInput.value += token;
+      if (typingInput.value.length > targetText.length) typingInput.value = targetText;
+      handleTypingChange();
+    } else {
+      mistakes++;
+      playKeySound(true);
+    }
+  }
+
+  const keyName = event.code || normalizeKeyName(event.key);
   const key = keyboard.querySelector(`[data-key="${CSS.escape(keyName)}"]`);
   key?.classList.add("active");
   setTimeout(() => key?.classList.remove("active"), 90);
