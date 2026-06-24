@@ -350,36 +350,36 @@ footer { padding: 35px clamp(24px, 7vw, 112px); display: flex; align-items: cent
 footer p { color: #8b9890; font-size: 12px; }
 footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
 
-.modal { position: fixed; inset: 0; z-index: 50; display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal { position: fixed; inset: 0; z-index: 50; display: none; align-items: center; justify-content: center; padding: 14px; overflow: hidden; }
 .modal.open { display: flex; }
 .modal-backdrop { position: absolute; inset: 0; background: rgba(15, 22, 17, .75); backdrop-filter: blur(8px); }
-.practice-panel { width: min(900px, 100%); max-height: calc(100vh - 40px); overflow-y: auto; position: relative; background: var(--paper); padding: clamp(24px, 4vw, 45px); box-shadow: 0 30px 90px rgba(0,0,0,.28); animation: panelIn .3s ease-out; }
+.practice-panel { width: min(820px, 100%); max-height: calc(100dvh - 28px); overflow-y: auto; overscroll-behavior: contain; position: relative; background: var(--paper); padding: clamp(18px, 2.4vw, 30px); box-shadow: 0 30px 90px rgba(0,0,0,.28); animation: panelIn .3s ease-out; }
 @keyframes panelIn { from { opacity: 0; transform: translateY(20px) scale(.98); } }
-.practice-header { display: flex; justify-content: space-between; align-items: start; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+.practice-header { display: flex; justify-content: space-between; align-items: start; border-bottom: 1px solid var(--line); padding-bottom: 14px; }
 .practice-header p { color: var(--orange); font: 500 11px "DM Mono"; margin: 0 0 5px; }
 .practice-header h2 { margin: 0; font-size: 27px; }
 .close-button { background: transparent; font-size: 30px; line-height: 1; color: var(--muted); }
-.live-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 25px 0; background: #efebe3; }
-.live-stats div { padding: 16px; text-align: center; border-right: 1px solid var(--line); }
+.live-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 16px 0; background: #efebe3; }
+.live-stats div { padding: 11px; text-align: center; border-right: 1px solid var(--line); }
 .live-stats div:last-child { border: 0; }
 .live-stats span, .live-stats small { display: block; }
 .live-stats span { font: 500 20px "DM Mono"; }
 .live-stats small { color: var(--muted); margin-top: 4px; font-size: 10px; }
-.typing-area { border: 2px solid transparent; padding: 25px; background: white; box-shadow: inset 0 0 0 1px var(--line); cursor: text; transition: border .2s; }
+.typing-area { border: 2px solid transparent; padding: 18px; background: white; box-shadow: inset 0 0 0 1px var(--line); cursor: text; transition: border .2s; }
 .typing-area:focus-within { border-color: var(--orange); }
-.typing-text { font: 500 clamp(20px, 3vw, 29px)/1.8 "DM Mono", monospace; letter-spacing: .04em; min-height: 100px; word-break: break-all; }
+.typing-text { font: 500 clamp(18px, 2.35vw, 25px)/1.55 "DM Mono", monospace; letter-spacing: .04em; min-height: 74px; max-height: 150px; overflow-y: auto; word-break: break-all; }
 .typing-text span.correct { color: var(--green); background: rgba(73,107,83,.08); }
 .typing-text span.wrong { color: white; background: var(--orange); }
 .typing-text span.current { border-bottom: 3px solid var(--orange); animation: blink .8s infinite; }
 @keyframes blink { 50% { border-color: transparent; } }
 #typingInput { width: 100%; height: 40px; opacity: 0; position: absolute; pointer-events: none; }
 .input-hint { color: var(--muted); font-size: 11px; margin: 12px 0 0; text-align: center; }
-.virtual-keyboard { margin: 25px auto 15px; max-width: 700px; }
-.key-row { display: flex; justify-content: center; gap: 6px; margin-bottom: 6px; }
-.key { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid #c9c1b5; border-bottom-width: 3px; border-radius: 4px; background: white; font: 500 11px "DM Mono"; transition: .08s; }
+.virtual-keyboard { margin: 16px auto 8px; max-width: 620px; }
+.key-row { display: flex; justify-content: center; gap: 5px; margin-bottom: 5px; }
+.key { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid #c9c1b5; border-bottom-width: 3px; border-radius: 4px; background: white; font: 500 10px "DM Mono"; transition: .08s; }
 .key.active { background: var(--orange); color: white; border-color: #c5542d; transform: translateY(2px); border-bottom-width: 1px; }
-.key.space { width: 230px; }
-.practice-actions { min-height: 53px; margin-top: 18px; display: flex; justify-content: space-between; align-items: center; }
+.key.space { width: 190px; }
+.practice-actions { min-height: 44px; margin-top: 12px; display: flex; justify-content: space-between; align-items: center; }
 .toast { position: fixed; left: 50%; bottom: 25px; z-index: 100; transform: translate(-50%, 20px); background: var(--ink); color: white; padding: 12px 18px; border-radius: 4px; font-size: 12px; opacity: 0; pointer-events: none; transition: .25s; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
@@ -510,12 +510,35 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
   .my-rank strong { display: block; margin-top: 8px; }
   .stat-card.featured { grid-row: auto; min-height: 300px; }
   footer { flex-direction: column; text-align: center; }
-  .practice-panel { padding: 22px 15px; }
-  .key { width: 28px; height: 35px; font-size: 9px; }
+  .modal { padding: 8px; }
+  .practice-panel { width: 100%; max-height: calc(100dvh - 16px); padding: 16px 12px; }
+  .practice-header h2 { font-size: 21px; }
+  .live-stats { margin: 12px 0; }
+  .live-stats div { padding: 9px 4px; }
+  .typing-area { padding: 13px; }
+  .typing-text { min-height: 64px; max-height: 120px; font-size: 17px; line-height: 1.45; }
+  .input-hint { margin-top: 8px; }
+  .virtual-keyboard { margin: 12px auto 6px; }
+  .key { width: 28px; height: 32px; font-size: 9px; }
   .key-row { gap: 3px; }
   .key.space { width: 150px; }
   .game-topbar { grid-template-columns: 1fr 30px; padding: 15px; }
   .game-hud { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; text-align: left; gap: 10px; }
   .game-arena { height: 55vh; }
   .game-bottom { padding: 10px 15px; }
+}
+
+@media (max-height: 720px) and (min-width: 651px) {
+  .practice-panel { width: min(780px, 100%); padding: 16px 22px; }
+  .practice-header { padding-bottom: 10px; }
+  .practice-header h2 { font-size: 22px; }
+  .live-stats { margin: 10px 0; }
+  .live-stats div { padding: 8px; }
+  .typing-area { padding: 14px; }
+  .typing-text { min-height: 58px; max-height: 105px; font-size: 19px; line-height: 1.45; }
+  .virtual-keyboard { margin: 10px auto 4px; }
+  .key { width: 31px; height: 31px; font-size: 9px; }
+  .key-row { gap: 4px; margin-bottom: 4px; }
+  .key.space { width: 170px; }
+  .practice-actions { margin-top: 8px; min-height: 38px; }
 }
