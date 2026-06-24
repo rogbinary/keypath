@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f0e8">
+  <title>键途 KeyPath — 从小白到打字高手</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="键途首页">
+      <span class="brand-mark">K</span>
+      <span>键途 <small>KEYPATH</small></span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a class="active" href="#learn">学习</a>
+      <a href="#games">打字游戏</a>
+      <a href="#progress">数据</a>
+      <a href="#leaderboard">排行榜</a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-button" id="soundToggle" aria-label="切换按键声音">♪</button>
+      <button class="account-chip" id="accountButton" type="button">
+        <span id="accountAvatar">游</span>
+        <strong id="accountName">游客</strong>
+      </button>
+      <div class="streak"><span>🔥</span><strong id="streakCount">3</strong> 天</div>
+      <button class="avatar" aria-label="个人资料">新</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="learn">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> 今天，敲出新的进步</p>
+        <h1>从第一根手指，<br>到<span>行云流水。</span></h1>
+        <p class="hero-desc">系统化课程、实时反馈、科学进阶。每天 15 分钟，让键盘成为你的第二语言。</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="continueButton">继续学习 <span>→</span></button>
+          <button class="text-button" id="quickTestButton">先测测我的水平</button>
+        </div>
+        <div class="trust-row">
+          <div class="mini-avatars">
+            <i>文</i><i>林</i><i>周</i><i>+</i>
+          </div>
+          <p><strong>12,680</strong> 位学习者正在进步</p>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="paper-tab">今日课程</div>
+        <div class="paper">
+          <div class="paper-head">
+            <div>
+              <p>初级 · 第 4 课</p>
+              <h2>左手的节奏</h2>
+            </div>
+            <div class="lesson-ring"><span>68<small>%</small></span></div>
+          </div>
+          <div class="keyboard-preview" aria-hidden="true">
+            <div class="preview-row">
+              <kbd>Q</kbd><kbd>W</kbd><kbd>E</kbd><kbd>R</kbd><kbd>T</kbd><kbd>Y</kbd><kbd>U</kbd><kbd>I</kbd><kbd>O</kbd><kbd>P</kbd>
+            </div>
+            <div class="preview-row offset">
+              <kbd class="target">A</kbd><kbd class="target">S</kbd><kbd class="target">D</kbd><kbd class="target">F</kbd><kbd>G</kbd><kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd>
+            </div>
+            <div class="preview-row offset-2">
+              <kbd>Z</kbd><kbd>X</kbd><kbd>C</kbd><kbd>V</kbd><kbd>B</kbd><kbd>N</kbd><kbd>M</kbd>
+            </div>
+            <div class="hands">☝︎ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ☝︎</div>
+          </div>
+          <div class="paper-footer">
+            <span>预计 8 分钟</span>
+            <button id="cardStartButton">开始练习</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="path-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> 你的成长路径</p>
+          <h2>循序渐进，每一步都算数</h2>
+        </div>
+        <p>课程根据你的速度与准确率动态调整，<br>让练习始终保持在“刚刚好”的难度。</p>
+      </div>
+
+      <div class="level-tabs" role="tablist">
+        <button class="level-tab active" data-level="beginner">
+          <span class="tab-number">01</span>
+          <span><strong>初级</strong><small>建立肌肉记忆</small></span>
+        </button>
+        <button class="level-tab" data-level="intermediate">
+          <span class="tab-number">02</span>
+          <span><strong>中级</strong><small>提升速度与节奏</small></span>
+        </button>
+        <button class="level-tab" data-level="advanced">
+          <span class="tab-number">03</span>
+          <span><strong>高级</strong><small>征服真实场景</small></span>
+        </button>
+      </div>
+
+      <div class="course-grid" id="courseGrid"></div>
+    </section>
+
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> 边玩边变快</p>
+          <h2>把手速，练成你的超能力</h2>
+        </div>
+        <p>从单个字母到完整单词，三种节奏不同的小游戏，<br>让枯燥的重复练习变成一场场挑战。</p>
+      </div>
+      <div class="game-grid">
+        <article class="game-card rain-card">
+          <div class="game-art">
+            <i>A</i><i>S</i><i>F</i><i>J</i><span class="game-ship">⌨</span>
+          </div>
+          <div class="game-info">
+            <span>入门 · 认键</span>
+            <h3>字母雨</h3>
+            <p>击落从天而降的字母，别让它们碰到底线。</p>
+            <button class="game-start" data-game="rain">开始游戏 →</button>
+          </div>
+        </article>
+        <article class="game-card survival-card">
+          <div class="game-art">
+            <div class="pixel-heart">♥ ♥ ♥</div>
+            <i>code</i><i>fast</i><i>type</i>
+            <span class="game-ship">▲</span>
+          </div>
+          <div class="game-info">
+            <span>进阶 · 单词</span>
+            <h3>单词生存战</h3>
+            <p>三条生命，完整输入单词才能消灭目标。</p>
+            <button class="game-start" data-game="survival">开始游戏 →</button>
+          </div>
+        </article>
+        <article class="game-card sprint-card">
+          <div class="game-art">
+            <strong>30<small>秒</small></strong>
+            <div class="speed-lines"></div>
+            <span class="game-ship">⚡</span>
+          </div>
+          <div class="game-info">
+            <span>高手 · 竞速</span>
+            <h3>极速 30 秒</h3>
+            <p>时间不停、连击加分，挑战你的手速极限。</p>
+            <button class="game-start" data-game="sprint">开始游戏 →</button>
+          </div>
+        </article>
+      </div>
+      <div class="game-record">
+        <span>个人游戏纪录</span>
+        <strong id="gameHighScore">0</strong>
+        <small>最高分</small>
+      </div>
+    </section>
+
+    <section class="stats-section" id="progress">
+      <div class="stats-copy">
+        <p class="eyebrow light"><span></span> 看得见的成长</p>
+        <h2>每一次敲击，<br>都在成为更好的你。</h2>
+        <p>不只记录数字，更帮你发现容易出错的按键、速度波动和最佳练习时间。</p>
+        <button class="outline-button" id="reportButton">查看完整报告 →</button>
+      </div>
+      <div class="stats-board">
+        <div class="stat-card featured">
+          <p>平均速度</p>
+          <div><strong id="averageWpm">32</strong><span>WPM</span></div>
+          <small>较上周 <b>↑ 18%</b></small>
+          <div class="sparkline">
+            <i style="height:25%"></i><i style="height:38%"></i><i style="height:31%"></i><i style="height:50%"></i><i style="height:46%"></i><i style="height:64%"></i><i style="height:80%"></i>
+          </div>
+        </div>
+        <div class="stat-card">
+          <p>准确率</p>
+          <div><strong id="averageAccuracy">94</strong><span>%</span></div>
+          <div class="accuracy-bar"><i></i></div>
+          <small>很稳，继续保持</small>
+        </div>
+        <div class="stat-card">
+          <p>累计练习</p>
+          <div><strong id="practiceMinutes">86</strong><span>分钟</span></div>
+          <div class="week-dots">
+            <i class="done"></i><i class="done"></i><i class="done"></i><i></i><i></i><i></i><i></i>
+          </div>
+          <small>本周目标 5 天</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="leaderboard-section" id="leaderboard">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> 玩家排行榜</p>
+          <h2>看看你排在第几名</h2>
+        </div>
+        <p>排行榜会根据已创建的玩家账号统计。完成练习或游戏后，排名会自动更新。</p>
+      </div>
+
+      <div class="leaderboard-grid">
+        <article class="leaderboard-card">
+          <div class="leaderboard-head">
+            <span>速度榜</span>
+            <strong>WPM</strong>
+          </div>
+          <ol class="leaderboard-list" id="speedLeaderboard"></ol>
+        </article>
+
+        <article class="leaderboard-card">
+          <div class="leaderboard-head">
+            <span>游戏榜</span>
+            <strong>分数</strong>
+          </div>
+          <ol class="leaderboard-list" id="gameLeaderboard"></ol>
+        </article>
+      </div>
+
+      <div class="my-rank" id="myRankCard">
+        <span>我的当前排名</span>
+        <strong id="myRankText">先登录并完成一次练习或游戏</strong>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-mark">K</span><span>键途 <small>KEYPATH</small></span></a>
+    <p>每天 15 分钟，与更快的自己相遇。</p>
+    <div><a href="#">关于</a><a href="#">帮助</a><a href="#">反馈</a></div>
+  </footer>
+
+  <div class="modal" id="practiceModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <section class="practice-panel" role="dialog" aria-modal="true" aria-labelledby="practiceTitle">
+      <div class="practice-header">
+        <div>
+          <p id="practiceLevel">初级 · 基础键位</p>
+          <h2 id="practiceTitle">基准键练习</h2>
+        </div>
+        <button class="close-button" id="closeModal" aria-label="关闭">×</button>
+      </div>
+
+      <div class="live-stats">
+        <div><span id="timer">00:00</span><small>时间</small></div>
+        <div><span id="liveWpm">0</span><small>WPM</small></div>
+        <div><span id="liveAccuracy">100%</span><small>准确率</small></div>
+      </div>
+
+      <div class="typing-area" id="typingArea" tabindex="0">
+        <div class="typing-text" id="typingText"></div>
+        <input id="typingInput" aria-label="在这里输入上方文字" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <p class="input-hint">点击这里，然后照着上方输入</p>
+      </div>
+
+      <div class="virtual-keyboard" id="virtualKeyboard" aria-hidden="true"></div>
+      <div class="practice-actions">
+        <button class="text-button" id="restartButton">重新开始</button>
+        <button class="primary-button" id="nextLessonButton" hidden>下一课 <span>→</span></button>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal game-modal" id="gameModal" aria-hidden="true">
+    <div class="modal-backdrop game-backdrop"></div>
+    <section class="game-panel" role="dialog" aria-modal="true" aria-labelledby="gameTitle">
+      <div class="game-topbar">
+        <div>
+          <p id="gameModeLabel">入门 · 认键</p>
+          <h2 id="gameTitle">字母雨</h2>
+        </div>
+        <div class="game-hud">
+          <div><small>得分</small><strong id="gameScore">0</strong></div>
+          <div><small>连击</small><strong id="gameCombo">0×</strong></div>
+          <div><small id="gameThirdLabel">生命</small><strong id="gameThirdValue">♥ ♥ ♥</strong></div>
+        </div>
+        <button class="close-button" id="closeGame" aria-label="关闭">×</button>
+      </div>
+      <div class="game-arena" id="gameArena" tabindex="0">
+        <div class="arena-grid"></div>
+        <div class="danger-line"></div>
+        <div class="arena-message" id="arenaMessage">
+          <span>准备好了吗？</span>
+          <strong>按任意字母开始</strong>
+        </div>
+        <div class="game-cursor" id="gameCursor"></div>
+      </div>
+      <div class="game-bottom">
+        <p>直接用键盘输入目标 · <kbd>ESC</kbd> 退出</p>
+        <button class="text-button" id="restartGame">重新开始</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal auth-modal" id="authModal" aria-hidden="true">
+    <div class="modal-backdrop auth-backdrop"></div>
+    <section class="auth-panel" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <div class="practice-header">
+        <div>
+          <p>PLAYER ACCOUNT</p>
+          <h2 id="authTitle">玩家账号</h2>
+        </div>
+        <button class="close-button" id="closeAuth" aria-label="关闭">×</button>
+      </div>
+
+      <div class="auth-current" id="authCurrent">
+        <span id="authCurrentAvatar">游</span>
+        <div>
+          <small>当前玩家</small>
+          <strong id="authCurrentName">游客</strong>
+        </div>
+      </div>
+
+      <div class="auth-tabs" role="tablist">
+        <button class="active" id="showLogin" type="button">登录</button>
+        <button id="showRegister" type="button">创建账号</button>
+      </div>
+
+      <form class="auth-form" id="authForm">
+        <label>
+          邮箱 / 玩家名
+          <input id="authUsername" autocomplete="username" maxlength="64" placeholder="例如：you@example.com 或 xiaoming">
+        </label>
+        <label>
+          密码
+          <input id="authPassword" type="password" autocomplete="current-password" maxlength="32" placeholder="至少 4 位">
+        </label>
+        <p class="auth-note" id="authNote">本版本账号保存在当前浏览器，用于免费上线和本机记录。</p>
+        <button class="primary-button" id="authSubmit" type="submit">登录 <span>→</span></button>
+      </form>
+
+      <button class="text-button auth-logout" id="logoutButton" type="button">退出当前账号</button>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
