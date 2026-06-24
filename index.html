@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f0e8">
-  <!-- SINGLE_FILE_COMPACT_V4 --><title>é”®é€” KeyPath â€” ä»Žå°ç™½åˆ°æ‰“å­—é«˜æ‰‹</title>
+  <!-- SINGLE_FILE_COMPACT_V5_SCROLL_RESET --><title>键途 KeyPath — 从小白到打字高手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -199,7 +199,7 @@ a { color: inherit; text-decoration: none; }
 .course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .course-card { min-height: 240px; padding: 25px; border: 1px solid var(--line); background: white; display: flex; flex-direction: column; transition: .25s; position: relative; overflow: hidden; }
 .course-card:hover { transform: translateY(-5px); box-shadow: 0 17px 35px rgba(35, 44, 37, .08); border-color: transparent; }
-.course-card.completed::before { content: "âœ“"; position: absolute; right: 18px; top: 16px; width: 25px; height: 25px; border-radius: 50%; display: grid; place-items: center; color: white; background: var(--green); font-size: 12px; }
+.course-card.completed::before { content: "✓"; position: absolute; right: 18px; top: 16px; width: 25px; height: 25px; border-radius: 50%; display: grid; place-items: center; color: white; background: var(--green); font-size: 12px; }
 .course-card.locked { opacity: .55; background: #f8f6f1; }
 .course-card .course-index { font: 500 11px "DM Mono"; color: var(--orange); }
 .course-card .course-icon { font: 400 35px "DM Mono"; margin: 23px 0 16px; }
@@ -379,7 +379,8 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
   max-width: calc(100vw - 24px);
   max-height: calc(100dvh - 24px);
   padding: 18px;
-  overflow-x: hidden;
+  overflow-x: clip;
+  scroll-padding-left: 0;
 }
 #practiceModal .practice-header,
 #practiceModal .live-stats,
@@ -597,52 +598,52 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
 <body>
   <div class="noise"></div>
   <header class="topbar">
-    <a class="brand" href="#" aria-label="é”®é€”é¦–é¡µ">
+    <a class="brand" href="#" aria-label="键途首页">
       <span class="brand-mark">K</span>
-      <span>é”®é€” <small>KEYPATH</small></span>
+      <span>键途 <small>KEYPATH</small></span>
     </a>
-    <nav class="nav-links" aria-label="ä¸»å¯¼èˆª">
-      <a class="active" href="#learn">å­¦ä¹ </a>
-      <a href="#games">æ‰“å­—æ¸¸æˆ</a>
-      <a href="#progress">æ•°æ®</a>
-      <a href="#leaderboard">æŽ’è¡Œæ¦œ</a>
+    <nav class="nav-links" aria-label="主导航">
+      <a class="active" href="#learn">学习</a>
+      <a href="#games">打字游戏</a>
+      <a href="#progress">数据</a>
+      <a href="#leaderboard">排行榜</a>
     </nav>
     <div class="top-actions">
-      <button class="icon-button" id="soundToggle" aria-label="åˆ‡æ¢æŒ‰é”®å£°éŸ³">â™ª</button>
+      <button class="icon-button" id="soundToggle" aria-label="切换按键声音">♪</button>
       <button class="account-chip" id="accountButton" type="button">
-        <span id="accountAvatar">æ¸¸</span>
-        <strong id="accountName">æ¸¸å®¢</strong>
+        <span id="accountAvatar">游</span>
+        <strong id="accountName">游客</strong>
       </button>
-      <div class="streak"><span>ðŸ”¥</span><strong id="streakCount">3</strong> å¤©</div>
-      <button class="avatar" aria-label="ä¸ªäººèµ„æ–™">æ–°</button>
+      <div class="streak"><span>🔥</span><strong id="streakCount">3</strong> 天</div>
+      <button class="avatar" aria-label="个人资料">新</button>
     </div>
   </header>
 
   <main>
     <section class="hero" id="learn">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> ä»Šå¤©ï¼Œæ•²å‡ºæ–°çš„è¿›æ­¥</p>
-        <h1>ä»Žç¬¬ä¸€æ ¹æ‰‹æŒ‡ï¼Œ<br>åˆ°<span>è¡Œäº‘æµæ°´ã€‚</span></h1>
-        <p class="hero-desc">ç³»ç»ŸåŒ–è¯¾ç¨‹ã€å®žæ—¶åé¦ˆã€ç§‘å­¦è¿›é˜¶ã€‚æ¯å¤© 15 åˆ†é’Ÿï¼Œè®©é”®ç›˜æˆä¸ºä½ çš„ç¬¬äºŒè¯­è¨€ã€‚</p>
+        <p class="eyebrow"><span></span> 今天，敲出新的进步</p>
+        <h1>从第一根手指，<br>到<span>行云流水。</span></h1>
+        <p class="hero-desc">系统化课程、实时反馈、科学进阶。每天 15 分钟，让键盘成为你的第二语言。</p>
         <div class="hero-actions">
-          <button class="primary-button" id="continueButton">ç»§ç»­å­¦ä¹  <span>â†’</span></button>
-          <button class="text-button" id="quickTestButton">å…ˆæµ‹æµ‹æˆ‘çš„æ°´å¹³</button>
+          <button class="primary-button" id="continueButton">继续学习 <span>→</span></button>
+          <button class="text-button" id="quickTestButton">先测测我的水平</button>
         </div>
         <div class="trust-row">
           <div class="mini-avatars">
-            <i>æ–‡</i><i>æž—</i><i>å‘¨</i><i>+</i>
+            <i>文</i><i>林</i><i>周</i><i>+</i>
           </div>
-          <p><strong>12,680</strong> ä½å­¦ä¹ è€…æ­£åœ¨è¿›æ­¥</p>
+          <p><strong>12,680</strong> 位学习者正在进步</p>
         </div>
       </div>
 
       <div class="hero-card">
-        <div class="paper-tab">ä»Šæ—¥è¯¾ç¨‹</div>
+        <div class="paper-tab">今日课程</div>
         <div class="paper">
           <div class="paper-head">
             <div>
-              <p>åˆçº§ Â· ç¬¬ 4 è¯¾</p>
-              <h2>å·¦æ‰‹çš„èŠ‚å¥</h2>
+              <p>初级 · 第 4 课</p>
+              <h2>左手的节奏</h2>
             </div>
             <div class="lesson-ring"><span>68<small>%</small></span></div>
           </div>
@@ -656,11 +657,11 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
             <div class="preview-row offset-2">
               <kbd>Z</kbd><kbd>X</kbd><kbd>C</kbd><kbd>V</kbd><kbd>B</kbd><kbd>N</kbd><kbd>M</kbd>
             </div>
-            <div class="hands">â˜ï¸Ž &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; â˜ï¸Ž</div>
+            <div class="hands">☝︎ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ☝︎</div>
           </div>
           <div class="paper-footer">
-            <span>é¢„è®¡ 8 åˆ†é’Ÿ</span>
-            <button id="cardStartButton">å¼€å§‹ç»ƒä¹ </button>
+            <span>预计 8 分钟</span>
+            <button id="cardStartButton">开始练习</button>
           </div>
         </div>
       </div>
@@ -669,24 +670,24 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
     <section class="path-section">
       <div class="section-heading">
         <div>
-          <p class="eyebrow"><span></span> ä½ çš„æˆé•¿è·¯å¾„</p>
-          <h2>å¾ªåºæ¸è¿›ï¼Œæ¯ä¸€æ­¥éƒ½ç®—æ•°</h2>
+          <p class="eyebrow"><span></span> 你的成长路径</p>
+          <h2>循序渐进，每一步都算数</h2>
         </div>
-        <p>è¯¾ç¨‹æ ¹æ®ä½ çš„é€Ÿåº¦ä¸Žå‡†ç¡®çŽ‡åŠ¨æ€è°ƒæ•´ï¼Œ<br>è®©ç»ƒä¹ å§‹ç»ˆä¿æŒåœ¨â€œåˆšåˆšå¥½â€çš„éš¾åº¦ã€‚</p>
+        <p>课程根据你的速度与准确率动态调整，<br>让练习始终保持在“刚刚好”的难度。</p>
       </div>
 
       <div class="level-tabs" role="tablist">
         <button class="level-tab active" data-level="beginner">
           <span class="tab-number">01</span>
-          <span><strong>åˆçº§</strong><small>å»ºç«‹è‚Œè‚‰è®°å¿†</small></span>
+          <span><strong>初级</strong><small>建立肌肉记忆</small></span>
         </button>
         <button class="level-tab" data-level="intermediate">
           <span class="tab-number">02</span>
-          <span><strong>ä¸­çº§</strong><small>æå‡é€Ÿåº¦ä¸ŽèŠ‚å¥</small></span>
+          <span><strong>中级</strong><small>提升速度与节奏</small></span>
         </button>
         <button class="level-tab" data-level="advanced">
           <span class="tab-number">03</span>
-          <span><strong>é«˜çº§</strong><small>å¾æœçœŸå®žåœºæ™¯</small></span>
+          <span><strong>高级</strong><small>征服真实场景</small></span>
         </button>
       </div>
 
@@ -696,86 +697,86 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
     <section class="games-section" id="games">
       <div class="section-heading">
         <div>
-          <p class="eyebrow"><span></span> è¾¹çŽ©è¾¹å˜å¿«</p>
-          <h2>æŠŠæ‰‹é€Ÿï¼Œç»ƒæˆä½ çš„è¶…èƒ½åŠ›</h2>
+          <p class="eyebrow"><span></span> 边玩边变快</p>
+          <h2>把手速，练成你的超能力</h2>
         </div>
-        <p>ä»Žå•ä¸ªå­—æ¯åˆ°å®Œæ•´å•è¯ï¼Œä¸‰ç§èŠ‚å¥ä¸åŒçš„å°æ¸¸æˆï¼Œ<br>è®©æž¯ç‡¥çš„é‡å¤ç»ƒä¹ å˜æˆä¸€åœºåœºæŒ‘æˆ˜ã€‚</p>
+        <p>从单个字母到完整单词，三种节奏不同的小游戏，<br>让枯燥的重复练习变成一场场挑战。</p>
       </div>
       <div class="game-grid">
         <article class="game-card rain-card">
           <div class="game-art">
-            <i>A</i><i>S</i><i>F</i><i>J</i><span class="game-ship">âŒ¨</span>
+            <i>A</i><i>S</i><i>F</i><i>J</i><span class="game-ship">⌨</span>
           </div>
           <div class="game-info">
-            <span>å…¥é—¨ Â· è®¤é”®</span>
-            <h3>å­—æ¯é›¨</h3>
-            <p>å‡»è½ä»Žå¤©è€Œé™çš„å­—æ¯ï¼Œåˆ«è®©å®ƒä»¬ç¢°åˆ°åº•çº¿ã€‚</p>
-            <button class="game-start" data-game="rain">å¼€å§‹æ¸¸æˆ â†’</button>
+            <span>入门 · 认键</span>
+            <h3>字母雨</h3>
+            <p>击落从天而降的字母，别让它们碰到底线。</p>
+            <button class="game-start" data-game="rain">开始游戏 →</button>
           </div>
         </article>
         <article class="game-card survival-card">
           <div class="game-art">
-            <div class="pixel-heart">â™¥ â™¥ â™¥</div>
+            <div class="pixel-heart">♥ ♥ ♥</div>
             <i>code</i><i>fast</i><i>type</i>
-            <span class="game-ship">â–²</span>
+            <span class="game-ship">▲</span>
           </div>
           <div class="game-info">
-            <span>è¿›é˜¶ Â· å•è¯</span>
-            <h3>å•è¯ç”Ÿå­˜æˆ˜</h3>
-            <p>ä¸‰æ¡ç”Ÿå‘½ï¼Œå®Œæ•´è¾“å…¥å•è¯æ‰èƒ½æ¶ˆç­ç›®æ ‡ã€‚</p>
-            <button class="game-start" data-game="survival">å¼€å§‹æ¸¸æˆ â†’</button>
+            <span>进阶 · 单词</span>
+            <h3>单词生存战</h3>
+            <p>三条生命，完整输入单词才能消灭目标。</p>
+            <button class="game-start" data-game="survival">开始游戏 →</button>
           </div>
         </article>
         <article class="game-card sprint-card">
           <div class="game-art">
-            <strong>30<small>ç§’</small></strong>
+            <strong>30<small>秒</small></strong>
             <div class="speed-lines"></div>
-            <span class="game-ship">âš¡</span>
+            <span class="game-ship">⚡</span>
           </div>
           <div class="game-info">
-            <span>é«˜æ‰‹ Â· ç«žé€Ÿ</span>
-            <h3>æžé€Ÿ 30 ç§’</h3>
-            <p>æ—¶é—´ä¸åœã€è¿žå‡»åŠ åˆ†ï¼ŒæŒ‘æˆ˜ä½ çš„æ‰‹é€Ÿæžé™ã€‚</p>
-            <button class="game-start" data-game="sprint">å¼€å§‹æ¸¸æˆ â†’</button>
+            <span>高手 · 竞速</span>
+            <h3>极速 30 秒</h3>
+            <p>时间不停、连击加分，挑战你的手速极限。</p>
+            <button class="game-start" data-game="sprint">开始游戏 →</button>
           </div>
         </article>
       </div>
       <div class="game-record">
-        <span>ä¸ªäººæ¸¸æˆçºªå½•</span>
+        <span>个人游戏纪录</span>
         <strong id="gameHighScore">0</strong>
-        <small>æœ€é«˜åˆ†</small>
+        <small>最高分</small>
       </div>
     </section>
 
     <section class="stats-section" id="progress">
       <div class="stats-copy">
-        <p class="eyebrow light"><span></span> çœ‹å¾—è§çš„æˆé•¿</p>
-        <h2>æ¯ä¸€æ¬¡æ•²å‡»ï¼Œ<br>éƒ½åœ¨æˆä¸ºæ›´å¥½çš„ä½ ã€‚</h2>
-        <p>ä¸åªè®°å½•æ•°å­—ï¼Œæ›´å¸®ä½ å‘çŽ°å®¹æ˜“å‡ºé”™çš„æŒ‰é”®ã€é€Ÿåº¦æ³¢åŠ¨å’Œæœ€ä½³ç»ƒä¹ æ—¶é—´ã€‚</p>
-        <button class="outline-button" id="reportButton">æŸ¥çœ‹å®Œæ•´æŠ¥å‘Š â†’</button>
+        <p class="eyebrow light"><span></span> 看得见的成长</p>
+        <h2>每一次敲击，<br>都在成为更好的你。</h2>
+        <p>不只记录数字，更帮你发现容易出错的按键、速度波动和最佳练习时间。</p>
+        <button class="outline-button" id="reportButton">查看完整报告 →</button>
       </div>
       <div class="stats-board">
         <div class="stat-card featured">
-          <p>å¹³å‡é€Ÿåº¦</p>
+          <p>平均速度</p>
           <div><strong id="averageWpm">32</strong><span>WPM</span></div>
-          <small>è¾ƒä¸Šå‘¨ <b>â†‘ 18%</b></small>
+          <small>较上周 <b>↑ 18%</b></small>
           <div class="sparkline">
             <i style="height:25%"></i><i style="height:38%"></i><i style="height:31%"></i><i style="height:50%"></i><i style="height:46%"></i><i style="height:64%"></i><i style="height:80%"></i>
           </div>
         </div>
         <div class="stat-card">
-          <p>å‡†ç¡®çŽ‡</p>
+          <p>准确率</p>
           <div><strong id="averageAccuracy">94</strong><span>%</span></div>
           <div class="accuracy-bar"><i></i></div>
-          <small>å¾ˆç¨³ï¼Œç»§ç»­ä¿æŒ</small>
+          <small>很稳，继续保持</small>
         </div>
         <div class="stat-card">
-          <p>ç´¯è®¡ç»ƒä¹ </p>
-          <div><strong id="practiceMinutes">86</strong><span>åˆ†é’Ÿ</span></div>
+          <p>累计练习</p>
+          <div><strong id="practiceMinutes">86</strong><span>分钟</span></div>
           <div class="week-dots">
             <i class="done"></i><i class="done"></i><i class="done"></i><i></i><i></i><i></i><i></i>
           </div>
-          <small>æœ¬å‘¨ç›®æ ‡ 5 å¤©</small>
+          <small>本周目标 5 天</small>
         </div>
       </div>
     </section>
@@ -783,16 +784,16 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
     <section class="leaderboard-section" id="leaderboard">
       <div class="section-heading">
         <div>
-          <p class="eyebrow"><span></span> çŽ©å®¶æŽ’è¡Œæ¦œ</p>
-          <h2>çœ‹çœ‹ä½ æŽ’åœ¨ç¬¬å‡ å</h2>
+          <p class="eyebrow"><span></span> 玩家排行榜</p>
+          <h2>看看你排在第几名</h2>
         </div>
-        <p>æŽ’è¡Œæ¦œä¼šæ ¹æ®å·²åˆ›å»ºçš„çŽ©å®¶è´¦å·ç»Ÿè®¡ã€‚å®Œæˆç»ƒä¹ æˆ–æ¸¸æˆåŽï¼ŒæŽ’åä¼šè‡ªåŠ¨æ›´æ–°ã€‚</p>
+        <p>排行榜会根据已创建的玩家账号统计。完成练习或游戏后，排名会自动更新。</p>
       </div>
 
       <div class="leaderboard-grid">
         <article class="leaderboard-card">
           <div class="leaderboard-head">
-            <span>é€Ÿåº¦æ¦œ</span>
+            <span>速度榜</span>
             <strong>WPM</strong>
           </div>
           <ol class="leaderboard-list" id="speedLeaderboard"></ol>
@@ -800,24 +801,24 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
 
         <article class="leaderboard-card">
           <div class="leaderboard-head">
-            <span>æ¸¸æˆæ¦œ</span>
-            <strong>åˆ†æ•°</strong>
+            <span>游戏榜</span>
+            <strong>分数</strong>
           </div>
           <ol class="leaderboard-list" id="gameLeaderboard"></ol>
         </article>
       </div>
 
       <div class="my-rank" id="myRankCard">
-        <span>æˆ‘çš„å½“å‰æŽ’å</span>
-        <strong id="myRankText">å…ˆç™»å½•å¹¶å®Œæˆä¸€æ¬¡ç»ƒä¹ æˆ–æ¸¸æˆ</strong>
+        <span>我的当前排名</span>
+        <strong id="myRankText">先登录并完成一次练习或游戏</strong>
       </div>
     </section>
   </main>
 
   <footer>
-    <a class="brand footer-brand" href="#"><span class="brand-mark">K</span><span>é”®é€” <small>KEYPATH</small></span></a>
-    <p>æ¯å¤© 15 åˆ†é’Ÿï¼Œä¸Žæ›´å¿«çš„è‡ªå·±ç›¸é‡ã€‚</p>
-    <div><a href="#">å…³äºŽ</a><a href="#">å¸®åŠ©</a><a href="#">åé¦ˆ</a></div>
+    <a class="brand footer-brand" href="#"><span class="brand-mark">K</span><span>键途 <small>KEYPATH</small></span></a>
+    <p>每天 15 分钟，与更快的自己相遇。</p>
+    <div><a href="#">关于</a><a href="#">帮助</a><a href="#">反馈</a></div>
   </footer>
 
   <div class="modal" id="practiceModal" aria-hidden="true">
@@ -825,29 +826,29 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
     <section class="practice-panel" role="dialog" aria-modal="true" aria-labelledby="practiceTitle">
       <div class="practice-header">
         <div>
-          <p id="practiceLevel">åˆçº§ Â· åŸºç¡€é”®ä½</p>
-          <h2 id="practiceTitle">åŸºå‡†é”®ç»ƒä¹ </h2>
-          <small class="compact-badge">ç´§å‡‘ç»ƒä¹ æ¨¡å¼</small>
+          <p id="practiceLevel">初级 · 基础键位</p>
+          <h2 id="practiceTitle">基准键练习</h2>
+          <small class="compact-badge">紧凑练习模式</small>
         </div>
-        <button class="close-button" id="closeModal" aria-label="å…³é—­">Ã—</button>
+        <button class="close-button" id="closeModal" aria-label="关闭">×</button>
       </div>
 
       <div class="live-stats">
-        <div><span id="timer">00:00</span><small>æ—¶é—´</small></div>
+        <div><span id="timer">00:00</span><small>时间</small></div>
         <div><span id="liveWpm">0</span><small>WPM</small></div>
-        <div><span id="liveAccuracy">100%</span><small>å‡†ç¡®çŽ‡</small></div>
+        <div><span id="liveAccuracy">100%</span><small>准确率</small></div>
       </div>
 
       <div class="typing-area" id="typingArea" tabindex="0">
         <div class="typing-text" id="typingText"></div>
-        <input id="typingInput" aria-label="åœ¨è¿™é‡Œè¾“å…¥ä¸Šæ–¹æ–‡å­—" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <p class="input-hint">ç‚¹å‡»è¿™é‡Œï¼Œç„¶åŽç…§ç€ä¸Šæ–¹è¾“å…¥</p>
+        <input id="typingInput" aria-label="在这里输入上方文字" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <p class="input-hint">点击这里，然后照着上方输入</p>
       </div>
 
       <div class="virtual-keyboard" id="virtualKeyboard" aria-hidden="true"></div>
       <div class="practice-actions">
-        <button class="text-button" id="restartButton">é‡æ–°å¼€å§‹</button>
-        <button class="primary-button" id="nextLessonButton" hidden>ä¸‹ä¸€è¯¾ <span>â†’</span></button>
+        <button class="text-button" id="restartButton">重新开始</button>
+        <button class="primary-button" id="nextLessonButton" hidden>下一课 <span>→</span></button>
       </div>
     </section>
   </div>
@@ -857,28 +858,28 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
     <section class="game-panel" role="dialog" aria-modal="true" aria-labelledby="gameTitle">
       <div class="game-topbar">
         <div>
-          <p id="gameModeLabel">å…¥é—¨ Â· è®¤é”®</p>
-          <h2 id="gameTitle">å­—æ¯é›¨</h2>
+          <p id="gameModeLabel">入门 · 认键</p>
+          <h2 id="gameTitle">字母雨</h2>
         </div>
         <div class="game-hud">
-          <div><small>å¾—åˆ†</small><strong id="gameScore">0</strong></div>
-          <div><small>è¿žå‡»</small><strong id="gameCombo">0Ã—</strong></div>
-          <div><small id="gameThirdLabel">ç”Ÿå‘½</small><strong id="gameThirdValue">â™¥ â™¥ â™¥</strong></div>
+          <div><small>得分</small><strong id="gameScore">0</strong></div>
+          <div><small>连击</small><strong id="gameCombo">0×</strong></div>
+          <div><small id="gameThirdLabel">生命</small><strong id="gameThirdValue">♥ ♥ ♥</strong></div>
         </div>
-        <button class="close-button" id="closeGame" aria-label="å…³é—­">Ã—</button>
+        <button class="close-button" id="closeGame" aria-label="关闭">×</button>
       </div>
       <div class="game-arena" id="gameArena" tabindex="0">
         <div class="arena-grid"></div>
         <div class="danger-line"></div>
         <div class="arena-message" id="arenaMessage">
-          <span>å‡†å¤‡å¥½äº†å—ï¼Ÿ</span>
-          <strong>æŒ‰ä»»æ„å­—æ¯å¼€å§‹</strong>
+          <span>准备好了吗？</span>
+          <strong>按任意字母开始</strong>
         </div>
         <div class="game-cursor" id="gameCursor"></div>
       </div>
       <div class="game-bottom">
-        <p>ç›´æŽ¥ç”¨é”®ç›˜è¾“å…¥ç›®æ ‡ Â· <kbd>ESC</kbd> é€€å‡º</p>
-        <button class="text-button" id="restartGame">é‡æ–°å¼€å§‹</button>
+        <p>直接用键盘输入目标 · <kbd>ESC</kbd> 退出</p>
+        <button class="text-button" id="restartGame">重新开始</button>
       </div>
     </section>
   </div>
@@ -889,38 +890,38 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
       <div class="practice-header">
         <div>
           <p>PLAYER ACCOUNT</p>
-          <h2 id="authTitle">çŽ©å®¶è´¦å·</h2>
+          <h2 id="authTitle">玩家账号</h2>
         </div>
-        <button class="close-button" id="closeAuth" aria-label="å…³é—­">Ã—</button>
+        <button class="close-button" id="closeAuth" aria-label="关闭">×</button>
       </div>
 
       <div class="auth-current" id="authCurrent">
-        <span id="authCurrentAvatar">æ¸¸</span>
+        <span id="authCurrentAvatar">游</span>
         <div>
-          <small>å½“å‰çŽ©å®¶</small>
-          <strong id="authCurrentName">æ¸¸å®¢</strong>
+          <small>当前玩家</small>
+          <strong id="authCurrentName">游客</strong>
         </div>
       </div>
 
       <div class="auth-tabs" role="tablist">
-        <button class="active" id="showLogin" type="button">ç™»å½•</button>
-        <button id="showRegister" type="button">åˆ›å»ºè´¦å·</button>
+        <button class="active" id="showLogin" type="button">登录</button>
+        <button id="showRegister" type="button">创建账号</button>
       </div>
 
       <form class="auth-form" id="authForm">
         <label>
-          é‚®ç®± / çŽ©å®¶å
-          <input id="authUsername" autocomplete="username" maxlength="64" placeholder="ä¾‹å¦‚ï¼šyou@example.com æˆ– xiaoming">
+          邮箱 / 玩家名
+          <input id="authUsername" autocomplete="username" maxlength="64" placeholder="例如：you@example.com 或 xiaoming">
         </label>
         <label>
-          å¯†ç 
-          <input id="authPassword" type="password" autocomplete="current-password" maxlength="32" placeholder="è‡³å°‘ 4 ä½">
+          密码
+          <input id="authPassword" type="password" autocomplete="current-password" maxlength="32" placeholder="至少 4 位">
         </label>
-        <p class="auth-note" id="authNote">æœ¬ç‰ˆæœ¬è´¦å·ä¿å­˜åœ¨å½“å‰æµè§ˆå™¨ï¼Œç”¨äºŽå…è´¹ä¸Šçº¿å’Œæœ¬æœºè®°å½•ã€‚</p>
-        <button class="primary-button" id="authSubmit" type="submit">ç™»å½• <span>â†’</span></button>
+        <p class="auth-note" id="authNote">本版本账号保存在当前浏览器，用于免费上线和本机记录。</p>
+        <button class="primary-button" id="authSubmit" type="submit">登录 <span>→</span></button>
       </form>
 
-      <button class="text-button auth-logout" id="logoutButton" type="button">é€€å‡ºå½“å‰è´¦å·</button>
+      <button class="text-button auth-logout" id="logoutButton" type="button">退出当前账号</button>
     </section>
   </div>
 
@@ -930,26 +931,26 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
   <script>
 const courses = {
   beginner: [
-    { icon: "F J", title: "æ‰¾åˆ°åŸºå‡†é”®", desc: "è®¤è¯†é”®ç›˜ä¸Žæ­£ç¡®åå§¿ï¼Œè®°ä½åŒæ‰‹çš„èµ·ç‚¹ã€‚", text: "fff jjj fjf jfj fff jjj fjfj jfjj", status: "completed" },
-    { icon: "ASDF", title: "å·¦æ‰‹çš„èŠ‚å¥", desc: "æŽŒæ¡ A S D Fï¼Œå»ºç«‹å·¦æ‰‹è‚Œè‚‰è®°å¿†ã€‚", text: "asdf fdsa sad dad fad sass add fall", status: "current" },
-    { icon: "JKL;", title: "å³æ‰‹çš„èŠ‚å¥", desc: "æŽŒæ¡ J K L ;ï¼Œè®©å³æ‰‹ç¨³å®šåœ°æ‰¾åˆ°ä½ç½®ã€‚", text: "jkl; ;lkj jkj l;l ask lad fall flask", status: "open" },
-    { icon: "Aâ€”Z", title: "å­—æ¯å¤§é›†åˆ", desc: "è¦†ç›–å…¨éƒ¨å­—æ¯ï¼Œå¼€å§‹è¾“å…¥å®Œæ•´è‹±æ–‡å•è¯ã€‚", text: "quick brown fox jumps over the lazy dog", status: "locked" }
+    { icon: "F J", title: "找到基准键", desc: "认识键盘与正确坐姿，记住双手的起点。", text: "fff jjj fjf jfj fff jjj fjfj jfjj", status: "completed" },
+    { icon: "ASDF", title: "左手的节奏", desc: "掌握 A S D F，建立左手肌肉记忆。", text: "asdf fdsa sad dad fad sass add fall", status: "current" },
+    { icon: "JKL;", title: "右手的节奏", desc: "掌握 J K L ;，让右手稳定地找到位置。", text: "jkl; ;lkj jkj l;l ask lad fall flask", status: "open" },
+    { icon: "A—Z", title: "字母大集合", desc: "覆盖全部字母，开始输入完整英文单词。", text: "quick brown fox jumps over the lazy dog", status: "locked" }
   ],
   intermediate: [
-    { icon: "â±", title: "é€Ÿåº¦çƒ­èº«", desc: "ç”¨çŸ­è¯ç»„å»ºç«‹ç¨³å®šèŠ‚æ‹ï¼Œçªç ´ 40 WPMã€‚", text: "time and tide wait for no one keep moving", status: "open" },
-    { icon: "ï¼Œã€‚", title: "ä¸­æ–‡æ ‡ç‚¹", desc: "ç»ƒä¹ å¸¸ç”¨æ ‡ç‚¹ä¸Žä¸­è‹±æ–‡ç¬¦å·åˆ‡æ¢ã€‚", text: "å­¦ä¹ ï¼Œä¸åªæ˜¯æŠµè¾¾ï¼›ä¹Ÿæ˜¯ä¸€è·¯å‘çŽ°ã€‚", status: "open" },
-    { icon: "Aa", title: "å¤§å°å†™åˆ‡æ¢", desc: "ç†Ÿç»ƒä½¿ç”¨ Shiftï¼Œä¿æŒèŠ‚å¥ä¸è¢«æ‰“æ–­ã€‚", text: "Practice Makes Progress Every Single Day", status: "open" },
-    { icon: "123", title: "æ•°å­—ä¸Žç¬¦å·", desc: "æŽŒæ¡æ•°å­—è¡Œå’Œå·¥ä½œä¸­çš„å¸¸ç”¨ç‰¹æ®Šå­—ç¬¦ã€‚", text: "2026 goal: accuracy > 96% & speed > 60", status: "locked" }
+    { icon: "⏱", title: "速度热身", desc: "用短词组建立稳定节拍，突破 40 WPM。", text: "time and tide wait for no one keep moving", status: "open" },
+    { icon: "，。", title: "中文标点", desc: "练习常用标点与中英文符号切换。", text: "学习，不只是抵达；也是一路发现。", status: "open" },
+    { icon: "Aa", title: "大小写切换", desc: "熟练使用 Shift，保持节奏不被打断。", text: "Practice Makes Progress Every Single Day", status: "open" },
+    { icon: "123", title: "数字与符号", desc: "掌握数字行和工作中的常用特殊字符。", text: "2026 goal: accuracy > 96% & speed > 60", status: "locked" }
   ],
   advanced: [
-    { icon: "</>", title: "ä»£ç ç–¾é€Ÿ", desc: "é’ˆå¯¹æ‹¬å·ã€ç¼©è¿›å’Œç¨‹åºç¬¦å·çš„ä¸“é¡¹è®­ç»ƒã€‚", text: "const focus = speed => speed * accuracy;", status: "open" },
-    { icon: "ç¨¿", title: "é•¿æ–‡è€åŠ›", desc: "åœ¨é•¿æ—¶é—´è¾“å…¥ä¸­ä¿æŒé€Ÿåº¦å’Œå‡†ç¡®çŽ‡ã€‚", text: "Great work is built one thoughtful keystroke at a time.", status: "open" },
-    { icon: "âš¡", title: "æžé™å†²åˆº", desc: "çŸ­æ—¶é—´é«˜å¼ºåº¦è®­ç»ƒï¼Œå†²å‡»ä¸ªäººæœ€é«˜é€Ÿåº¦ã€‚", text: "fast focused fluid fearless forward", status: "open" },
-    { icon: "ðŸ†", title: "é«˜æ‰‹è®¤è¯", desc: "å®Œæˆç»¼åˆæµ‹è¯•ï¼ŒèŽ·å¾—ä½ çš„é”®é€”é«˜æ‰‹å¾½ç« ã€‚", text: "Accuracy builds confidence and confidence builds speed.", status: "locked" }
+    { icon: "</>", title: "代码疾速", desc: "针对括号、缩进和程序符号的专项训练。", text: "const focus = speed => speed * accuracy;", status: "open" },
+    { icon: "稿", title: "长文耐力", desc: "在长时间输入中保持速度和准确率。", text: "Great work is built one thoughtful keystroke at a time.", status: "open" },
+    { icon: "⚡", title: "极限冲刺", desc: "短时间高强度训练，冲击个人最高速度。", text: "fast focused fluid fearless forward", status: "open" },
+    { icon: "🏆", title: "高手认证", desc: "完成综合测试，获得你的键途高手徽章。", text: "Accuracy builds confidence and confidence builds speed.", status: "locked" }
   ]
 };
 
-const levelNames = { beginner: "åˆçº§", intermediate: "ä¸­çº§", advanced: "é«˜çº§" };
+const levelNames = { beginner: "初级", intermediate: "中级", advanced: "高级" };
 const courseGrid = document.querySelector("#courseGrid");
 const modal = document.querySelector("#practiceModal");
 const typingInput = document.querySelector("#typingInput");
@@ -964,7 +965,7 @@ let timerInterval = null;
 let mistakes = 0;
 let soundEnabled = true;
 let audioContext;
-const defaultPlayer = { username: "guest", displayName: "æ¸¸å®¢" };
+const defaultPlayer = { username: "guest", displayName: "游客" };
 let authMode = "login";
 let currentPlayer = loadCurrentPlayer();
 let cloudClient = null;
@@ -1056,7 +1057,7 @@ async function initCloudSync() {
 
 async function applyCloudUser(user) {
   cloudUser = user;
-  const displayName = user.user_metadata?.display_name || user.email?.split("@")[0] || "çŽ©å®¶";
+  const displayName = user.user_metadata?.display_name || user.email?.split("@")[0] || "玩家";
   currentPlayer = { username: user.id, displayName };
   localStorage.setItem("keypathCurrentPlayer", JSON.stringify(currentPlayer));
 
@@ -1083,7 +1084,7 @@ async function applyCloudUser(user) {
 async function syncStatsToCloud(stats) {
   if (!cloudEnabled()) return;
 
-  const displayName = currentPlayer.displayName || cloudUser.email?.split("@")[0] || "çŽ©å®¶";
+  const displayName = currentPlayer.displayName || cloudUser.email?.split("@")[0] || "玩家";
   await cloudClient.from("profiles").upsert({
     id: cloudUser.id,
     display_name: displayName,
@@ -1107,11 +1108,11 @@ function cleanUsername(value) {
 }
 
 function playerInitial(name) {
-  return (name || "æ¸¸").slice(0, 1).toUpperCase();
+  return (name || "游").slice(0, 1).toUpperCase();
 }
 
 function refreshAccountUi() {
-  const display = currentPlayer.displayName || currentPlayer.username || "æ¸¸å®¢";
+  const display = currentPlayer.displayName || currentPlayer.username || "游客";
   document.querySelector("#accountName").textContent = display;
   document.querySelector("#accountAvatar").textContent = playerInitial(display);
   document.querySelector("#authCurrentName").textContent = display;
@@ -1148,7 +1149,7 @@ function getAllPlayerRows() {
   if ((guestStats.wpm || 0) > 0 || (guestStats.gameHighScore || 0) > 0) {
     rows.push({
       username: "guest",
-      displayName: "æ¸¸å®¢",
+      displayName: "游客",
       wpm: guestStats.wpm || 0,
       accuracy: guestStats.accuracy || 0,
       gameHighScore: guestStats.gameHighScore || 0,
@@ -1170,13 +1171,13 @@ async function getCloudPlayerRows() {
     .limit(100);
 
   if (error) {
-    showToast("äº‘ç«¯æŽ’è¡Œæ¦œè¯»å–å¤±è´¥ï¼Œè¯·æ£€æŸ¥ Supabase æƒé™");
+    showToast("云端排行榜读取失败，请检查 Supabase 权限");
     return [];
   }
 
   return (data || []).map(row => ({
     username: row.user_id,
-    displayName: row.display_name || "çŽ©å®¶",
+    displayName: row.display_name || "玩家",
     wpm: row.best_wpm || 0,
     accuracy: row.best_accuracy || 0,
     gameHighScore: row.game_high_score || 0,
@@ -1202,7 +1203,7 @@ function renderLeaderboard(listId, rows, scoreKey, emptyText, unit) {
       <span class="rank-number">${index + 1}</span>
       <span class="rank-player">
         <strong>${escapeHtml(row.displayName)}</strong>
-        <small>${row.sessions + row.gameSessions} æ¬¡è®°å½•</small>
+        <small>${row.sessions + row.gameSessions} 次记录</small>
       </span>
       <span class="rank-score">${row[scoreKey]}${unit}</span>
     </li>
@@ -1213,24 +1214,24 @@ function renderLeaderboard(listId, rows, scoreKey, emptyText, unit) {
 
 async function refreshLeaderboards() {
   const rows = cloudClient ? await getCloudPlayerRows() : getAllPlayerRows();
-  const speedRanked = renderLeaderboard("#speedLeaderboard", rows, "wpm", "è¿˜æ²¡æœ‰é€Ÿåº¦è®°å½•ã€‚å®Œæˆä¸€æ¬¡ç»ƒä¹ åŽå°±ä¼šä¸Šæ¦œã€‚", "");
-  const gameRanked = renderLeaderboard("#gameLeaderboard", rows, "gameHighScore", "è¿˜æ²¡æœ‰æ¸¸æˆè®°å½•ã€‚çŽ©ä¸€å±€æ¸¸æˆåŽå°±ä¼šä¸Šæ¦œã€‚", "");
+  const speedRanked = renderLeaderboard("#speedLeaderboard", rows, "wpm", "还没有速度记录。完成一次练习后就会上榜。", "");
+  const gameRanked = renderLeaderboard("#gameLeaderboard", rows, "gameHighScore", "还没有游戏记录。玩一局游戏后就会上榜。", "");
   const speedIndex = speedRanked.findIndex(row => row.username === currentPlayer.username);
   const gameIndex = gameRanked.findIndex(row => row.username === currentPlayer.username);
   const parts = [];
 
-  if (speedIndex >= 0) parts.push(`é€Ÿåº¦æ¦œç¬¬ ${speedIndex + 1} å`);
-  if (gameIndex >= 0) parts.push(`æ¸¸æˆæ¦œç¬¬ ${gameIndex + 1} å`);
+  if (speedIndex >= 0) parts.push(`速度榜第 ${speedIndex + 1} 名`);
+  if (gameIndex >= 0) parts.push(`游戏榜第 ${gameIndex + 1} 名`);
 
   document.querySelector("#myRankText").textContent = parts.length
-    ? parts.join(" Â· ")
-    : "å…ˆç™»å½•å¹¶å®Œæˆä¸€æ¬¡ç»ƒä¹ æˆ–æ¸¸æˆ";
+    ? parts.join(" · ")
+    : "先登录并完成一次练习或游戏";
 }
 
 function renderCourses(level) {
   activeLevel = level;
   courseGrid.innerHTML = courses[level].map((course, index) => {
-    const labels = { completed: "å†ç»ƒä¸€æ¬¡", current: "ç»§ç»­å­¦ä¹  â†’", open: "å¼€å§‹ç»ƒä¹  â†’", locked: "ðŸ”’ å®Œæˆå‰ä¸€è¯¾ç¨‹åŽè§£é”" };
+    const labels = { completed: "再练一次", current: "继续学习 →", open: "开始练习 →", locked: "🔒 完成前一课程后解锁" };
     return `
       <article class="course-card ${course.status}">
         <span class="course-index">LESSON ${String(index + 1).padStart(2, "0")}</span>
@@ -1268,13 +1269,29 @@ function openPractice(level, index) {
   activeCourse = index;
   const course = courses[level][index];
   targetText = course.text;
-  document.querySelector("#practiceLevel").textContent = `${levelNames[level]} Â· ç¬¬ ${index + 1} è¯¾`;
+  document.querySelector("#practiceLevel").textContent = `${levelNames[level]} · 第 ${index + 1} 课`;
   document.querySelector("#practiceTitle").textContent = course.title;
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
   resetPractice();
+  resetPracticeHorizontalScroll();
   setTimeout(() => typingInput.focus(), 100);
+}
+
+function resetPracticeHorizontalScroll() {
+  requestAnimationFrame(() => {
+    [
+      document.documentElement,
+      document.body,
+      modal,
+      document.querySelector(".practice-panel"),
+      document.querySelector("#typingArea"),
+      document.querySelector("#typingText")
+    ].forEach(element => {
+      if (element) element.scrollLeft = 0;
+    });
+  });
 }
 
 function closePractice() {
@@ -1394,7 +1411,7 @@ function finishPractice() {
   document.querySelector("#averageWpm").textContent = Math.max(32, best.wpm);
   document.querySelector("#averageAccuracy").textContent = Math.max(94, best.accuracy);
   refreshDashboard();
-  showToast(`å®Œæˆï¼${wpm} WPM Â· ${accuracy}% å‡†ç¡®çŽ‡`);
+  showToast(`完成！${wpm} WPM · ${accuracy}% 准确率`);
 }
 
 function showToast(message) {
@@ -1414,9 +1431,9 @@ document.querySelector("#quickTestButton").addEventListener("click", () => openP
 document.querySelector("#soundToggle").addEventListener("click", event => {
   soundEnabled = !soundEnabled;
   event.currentTarget.classList.toggle("muted", !soundEnabled);
-  showToast(soundEnabled ? "æŒ‰é”®å£°éŸ³å·²å¼€å¯" : "æŒ‰é”®å£°éŸ³å·²å…³é—­");
+  showToast(soundEnabled ? "按键声音已开启" : "按键声音已关闭");
 });
-document.querySelector("#reportButton").addEventListener("click", () => showToast("å®Œæ•´å­¦ä¹ æŠ¥å‘Šæ­£åœ¨è·¯ä¸Š âœ¦"));
+document.querySelector("#reportButton").addEventListener("click", () => showToast("完整学习报告正在路上 ✦"));
 
 function openAuth() {
   document.querySelector("#authModal").classList.add("open");
@@ -1436,10 +1453,10 @@ function setAuthMode(mode) {
   const isRegister = mode === "register";
   document.querySelector("#showLogin").classList.toggle("active", !isRegister);
   document.querySelector("#showRegister").classList.toggle("active", isRegister);
-  document.querySelector("#authSubmit").innerHTML = isRegister ? "åˆ›å»ºè´¦å· <span>â†’</span>" : "ç™»å½• <span>â†’</span>";
+  document.querySelector("#authSubmit").innerHTML = isRegister ? "创建账号 <span>→</span>" : "登录 <span>→</span>";
   document.querySelector("#authNote").textContent = isRegister
-    ? "å¯ä»¥ç›´æŽ¥è¾“å…¥çŽ©å®¶åæ³¨å†Œï¼›ä¹Ÿå¯ä»¥è¾“å…¥é‚®ç®±æ³¨å†Œã€‚"
-    : "ç™»å½•åŽä¼šåˆ‡æ¢åˆ°è¯¥çŽ©å®¶çš„ç‹¬ç«‹ç»ƒä¹ è®°å½•ã€æ¸¸æˆæœ€é«˜åˆ†å’Œå…¨ç«™æŽ’è¡Œæ¦œã€‚";
+    ? "可以直接输入玩家名注册；也可以输入邮箱注册。"
+    : "登录后会切换到该玩家的独立练习记录、游戏最高分和全站排行榜。";
   document.querySelector("#authPassword").autocomplete = isRegister ? "new-password" : "current-password";
 }
 
@@ -1450,12 +1467,12 @@ async function handleAuthSubmit(event) {
   const password = document.querySelector("#authPassword").value;
 
   if (!rawName.trim() || (!rawName.includes("@") && username.length < 3)) {
-    showToast("è¯·è¾“å…¥é‚®ç®±ï¼Œæˆ–è‡³å°‘ 3 ä½çŽ©å®¶å");
+    showToast("请输入邮箱，或至少 3 位玩家名");
     return;
   }
 
   if (!password || password.length < 4) {
-    showToast("å¯†ç è‡³å°‘ 4 ä½");
+    showToast("密码至少 4 位");
     return;
   }
 
@@ -1478,10 +1495,10 @@ async function handleAuthSubmit(event) {
       if (data.user && data.session) {
         await applyCloudUser(data.user);
         await syncStatsToCloud(getStats());
-        showToast(`äº‘ç«¯è´¦å·å·²åˆ›å»ºï¼š${displayName}`);
+        showToast(`云端账号已创建：${displayName}`);
         closeAuth();
       } else {
-        showToast("è´¦å·å·²åˆ›å»ºï¼Œè¯·å…ˆå®Œæˆé‚®ç®±ç¡®è®¤å†ç™»å½•");
+        showToast("账号已创建，请先完成邮箱确认再登录");
       }
       return;
     }
@@ -1493,7 +1510,7 @@ async function handleAuthSubmit(event) {
     }
 
     await applyCloudUser(data.user);
-    showToast(`å·²äº‘ç«¯ç™»å½•ï¼š${displayName}`);
+    showToast(`已云端登录：${displayName}`);
     closeAuth();
     return;
   }
@@ -1502,7 +1519,7 @@ async function handleAuthSubmit(event) {
 
   if (authMode === "register") {
     if (accounts[username]) {
-      showToast("è¿™ä¸ªçŽ©å®¶åå·²ç»è¢«ä½¿ç”¨");
+      showToast("这个玩家名已经被使用");
       return;
     }
     accounts[username] = {
@@ -1513,18 +1530,18 @@ async function handleAuthSubmit(event) {
     };
     saveAccounts(accounts);
     setCurrentPlayer({ username, displayName: username });
-    showToast(`æ¬¢è¿Žï¼Œ${username}`);
+    showToast(`欢迎，${username}`);
     closeAuth();
     return;
   }
 
   if (!accounts[username] || accounts[username].password !== password) {
-    showToast("çŽ©å®¶åæˆ–å¯†ç ä¸æ­£ç¡®");
+    showToast("玩家名或密码不正确");
     return;
   }
 
   setCurrentPlayer({ username, displayName: accounts[username].displayName || username });
-  showToast(`å·²ç™»å½•ï¼š${username}`);
+  showToast(`已登录：${username}`);
   closeAuth();
 }
 
@@ -1537,7 +1554,7 @@ document.querySelector("#authForm").addEventListener("submit", handleAuthSubmit)
 document.querySelector("#logoutButton").addEventListener("click", async () => {
   if (cloudClient) await cloudClient.auth.signOut();
   setCurrentPlayer(defaultPlayer);
-  showToast("å·²é€€å‡ºè´¦å·ï¼Œå½“å‰ä¸ºæ¸¸å®¢æ¨¡å¼");
+  showToast("已退出账号，当前为游客模式");
   closeAuth();
 });
 
@@ -1545,7 +1562,7 @@ nextLessonButton.addEventListener("click", () => {
   const nextIndex = (activeCourse + 1) % courses[activeLevel].length;
   const next = courses[activeLevel][nextIndex];
   if (next.status === "locked") {
-    showToast("ä¸‹ä¸€è¯¾ç¨‹å°†åœ¨æ­£å¼ç‰ˆä¸­æŒ‰è¿›åº¦è§£é”");
+    showToast("下一课程将在正式版中按进度解锁");
     closePractice();
   } else {
     openPractice(activeLevel, nextIndex);
@@ -1574,9 +1591,9 @@ const gameWords = {
   sprint: ["go", "run", "flow", "swift", "dash", "power", "level", "combo", "rocket", "victory"]
 };
 const gameSettings = {
-  rain: { title: "å­—æ¯é›¨", label: "å…¥é—¨ Â· è®¤é”®", lives: 5, spawn: 1150, speed: 0.065, points: 10 },
-  survival: { title: "å•è¯ç”Ÿå­˜æˆ˜", label: "è¿›é˜¶ Â· å•è¯", lives: 3, spawn: 1700, speed: 0.045, points: 25 },
-  sprint: { title: "æžé€Ÿ 30 ç§’", label: "é«˜æ‰‹ Â· ç«žé€Ÿ", lives: Infinity, spawn: 800, speed: 0.07, points: 20, duration: 30 }
+  rain: { title: "字母雨", label: "入门 · 认键", lives: 5, spawn: 1150, speed: 0.065, points: 10 },
+  survival: { title: "单词生存战", label: "进阶 · 单词", lives: 3, spawn: 1700, speed: 0.045, points: 25 },
+  sprint: { title: "极速 30 秒", label: "高手 · 竞速", lives: Infinity, spawn: 800, speed: 0.07, points: 20, duration: 30 }
 };
 let gameMode = "rain";
 let gameRunning = false;
@@ -1598,7 +1615,7 @@ function openGame(mode) {
   const setting = gameSettings[mode];
   document.querySelector("#gameTitle").textContent = setting.title;
   document.querySelector("#gameModeLabel").textContent = setting.label;
-  document.querySelector("#gameThirdLabel").textContent = mode === "sprint" ? "æ—¶é—´" : "ç”Ÿå‘½";
+  document.querySelector("#gameThirdLabel").textContent = mode === "sprint" ? "时间" : "生命";
   gameModal.classList.add("open");
   gameModal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
@@ -1624,10 +1641,10 @@ function resetGame() {
   gameTyped = "";
   gameStarted = false;
   document.querySelector("#gameScore").textContent = "0";
-  document.querySelector("#gameCombo").textContent = "0Ã—";
+  document.querySelector("#gameCombo").textContent = "0×";
   updateGameThird();
   arenaMessage.classList.remove("hidden");
-  arenaMessage.innerHTML = "<span>å‡†å¤‡å¥½äº†å—ï¼Ÿ</span><strong>æŒ‰ä»»æ„å­—æ¯å¼€å§‹</strong>";
+  arenaMessage.innerHTML = "<span>准备好了吗？</span><strong>按任意字母开始</strong>";
 }
 
 function startGame() {
@@ -1643,7 +1660,7 @@ function startGame() {
     gameCountdown = setInterval(() => {
       gameTime--;
       updateGameThird();
-      if (gameTime <= 0) endGame("æ—¶é—´åˆ°ï¼");
+      if (gameTime <= 0) endGame("时间到！");
     }, 1000);
   }
 }
@@ -1702,7 +1719,7 @@ function handleGameKey(key) {
 
   if (!target) {
     gameCombo = 0;
-    document.querySelector("#gameCombo").textContent = "0Ã—";
+    document.querySelector("#gameCombo").textContent = "0×";
     playKeySound(true);
     gameArena.classList.add("game-error");
     setTimeout(() => gameArena.classList.remove("game-error"), 100);
@@ -1722,7 +1739,7 @@ function hitTarget(target) {
   const multiplier = Math.min(5, 1 + Math.floor(gameCombo / 5));
   gameScore += gameSettings[gameMode].points * multiplier;
   document.querySelector("#gameScore").textContent = gameScore;
-  document.querySelector("#gameCombo").textContent = `${gameCombo}Ã—`;
+  document.querySelector("#gameCombo").textContent = `${gameCombo}×`;
   target.element.classList.add("hit");
   gameTargets = gameTargets.filter(item => item.id !== target.id);
   setTimeout(() => target.element.remove(), 230);
@@ -1733,17 +1750,17 @@ function missTarget(target) {
   target.element.remove();
   gameTargets = gameTargets.filter(item => item.id !== target.id);
   gameCombo = 0;
-  document.querySelector("#gameCombo").textContent = "0Ã—";
+  document.querySelector("#gameCombo").textContent = "0×";
   if (gameMode !== "sprint") {
     gameLives--;
     updateGameThird();
-    if (gameLives <= 0) endGame("æŒ‘æˆ˜ç»“æŸ");
+    if (gameLives <= 0) endGame("挑战结束");
   }
 }
 
 function updateGameThird() {
   document.querySelector("#gameThirdValue").textContent =
-    gameMode === "sprint" ? `${gameTime}s` : "â™¥ ".repeat(Math.max(0, gameLives)).trim();
+    gameMode === "sprint" ? `${gameTime}s` : "♥ ".repeat(Math.max(0, gameLives)).trim();
 }
 
 function endGame(message) {
@@ -1756,7 +1773,7 @@ function endGame(message) {
   document.querySelector("#gameHighScore").textContent = stats.gameHighScore;
   refreshDashboard();
   arenaMessage.classList.remove("hidden");
-  arenaMessage.innerHTML = `<span>${message}</span><strong>${gameScore} åˆ† Â· ${gameCombo} æœ€é«˜è¿žå‡»</strong><button class="primary-button" id="playAgain">å†æ¥ä¸€å±€ <span>â†»</span></button>`;
+  arenaMessage.innerHTML = `<span>${message}</span><strong>${gameScore} 分 · ${gameCombo} 最高连击</strong><button class="primary-button" id="playAgain">再来一局 <span>↻</span></button>`;
   document.querySelector("#playAgain").addEventListener("click", () => {
     resetGame();
     gameArena.focus();
@@ -1787,4 +1804,3 @@ refreshDashboard();
 </script>
 </body>
 </html>
-
