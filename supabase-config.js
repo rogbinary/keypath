@@ -6,6 +6,6 @@
 
 window.KEYPATH_SUPABASE = {
   ENABLE_CLOUD_SYNC: true,
-  URL: "https://zenbvdfkhrrbbfxocxkd.supabase.co/rest/v1/",
+  URL: "https://zenbvdfkhrrbbfxocxkd.supabase.co",
   ANON_KEY: "sb_publishable_o-docEJ7rhB-ctLs9SpYIg_gDDUUGzF"
 };
