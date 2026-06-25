@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f0e8">
-  <!-- SINGLE_FILE_COMPACT_V10_FINGER_GUIDE_FOCUS --><title>键途 KeyPath — 从小白到打字高手</title>
+  <!-- SINGLE_FILE_COMPACT_V11_30_LESSONS --><title>键途 KeyPath — 从小白到打字高手</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -985,7 +985,7 @@ footer > div { display: flex; gap: 25px; font-size: 12px; color: #b9c0bb; }
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="supabase-config.js"></script>
   <script>
-const courses = {
+const oldCourses = {
   beginner: [
     { icon: "F J", title: "找到基准键", desc: "认识键盘与正确坐姿，记住双手的起点。", text: "fff jjj fjf jfj fff jjj fjfj jfjj", status: "completed" },
     { icon: "ASDF", title: "左手的节奏", desc: "掌握 A S D F，建立左手肌肉记忆。", text: "asdf fdsa sad dad fad sass add fall", status: "current" },
@@ -1004,6 +1004,45 @@ const courses = {
     { icon: "稿", title: "长文耐力", desc: "在长时间输入中保持速度和准确率。", text: "Great work is built one thoughtful keystroke at a time.", status: "open" },
     { icon: "⚡", title: "极限冲刺", desc: "短时间高强度训练，冲击个人最高速度。", text: "fast focused fluid fearless forward", status: "open" },
     { icon: "🏆", title: "高手认证", desc: "完成综合测试，获得你的键途高手徽章。", text: "Accuracy builds confidence and confidence builds speed.", status: "locked" }
+  ]
+};
+
+const courses = {
+  beginner: [
+    { icon: "F J", title: "找到基准键", desc: "左食指放 F，右食指放 J，建立双手起点。", text: "fff jjj fjf jfj fff jjj fjfj jfjj", status: "completed" },
+    { icon: "ASDF", title: "左手家位", desc: "练习 A S D F，培养左手稳定节奏。", text: "asdf fdsa sad dad fad sass add fall", status: "current" },
+    { icon: "JKL;", title: "右手家位", desc: "练习 J K L ;，让右手记住家位。", text: "jkl; ;lkj jkj l;l ask lad fall flask", status: "open" },
+    { icon: "GH", title: "食指中区", desc: "练习 G H，让左右食指敢离开又回到 F/J。", text: "fgh jhg fgjh ghgh half glad high flag", status: "open" },
+    { icon: "RTYU", title: "上排食指", desc: "练习 R T Y U，掌握上排中间区域。", text: "try true fury hurry turtle utility", status: "open" },
+    { icon: "QWER", title: "左上排", desc: "练习 Q W E R，手指向上伸展后回家位。", text: "we were eager quick queer reward", status: "open" },
+    { icon: "UIOP", title: "右上排", desc: "练习 U I O P，保持右手手腕稳定。", text: "upon input union opinion pupil loop", status: "open" },
+    { icon: "ZXCV", title: "左下排", desc: "练习 Z X C V，训练左手下排触键。", text: "zinc exact civic vivid vex cozy", status: "open" },
+    { icon: "BNM", title: "右下排", desc: "练习 B N M，完成下排常用键。", text: "main number member banana minimum", status: "open" },
+    { icon: "A-Z", title: "全字母整合", desc: "整合全部英文字母，开始流畅输入。", text: "quick brown fox jumps over the lazy dog", status: "open" }
+  ],
+  intermediate: [
+    { icon: "TIME", title: "English speed warm-up", desc: "只练英文单词和空格，建立稳定节拍。", text: "time and tide wait for no one keep moving", status: "open" },
+    { icon: "CAP", title: "Capital letters", desc: "练习 Shift 与大写字母，保持节奏不断。", text: "Practice Makes Progress Every Single Day", status: "open" },
+    { icon: ".,", title: "Comma and period", desc: "练习英文逗号与句号。", text: "Look ahead, stay calm, type clean.", status: "open" },
+    { icon: "!?;", title: "Question exclamation semicolon", desc: "练习问号、感叹号和分号。", text: "Ready? Yes! Keep focus; type well?", status: "open" },
+    { icon: "'\"", title: "Quotes practice", desc: "练习英文单引号与双引号。", text: "'focus' means \"steady hands\" and clear eyes", status: "open" },
+    { icon: "12345", title: "Number row 1-5", desc: "练习左手数字键。", text: "1 2 3 4 5 15 24 35 45 12345", status: "open" },
+    { icon: "67890", title: "Number row 6-0", desc: "练习右手数字键。", text: "6 7 8 9 0 60 78 89 90 67890", status: "open" },
+    { icon: "#%+", title: "Shift symbols", desc: "练习常用英文符号。", text: "#1 + #2 = 3; save 50% effort!", status: "open" },
+    { icon: "EMAIL", title: "Real text symbols", desc: "练习邮箱、网址和英文常用符号。", text: "user.name+test@example.com/path-2026", status: "open" },
+    { icon: "MIX", title: "Mixed accuracy test", desc: "混合英文、数字与标点，检查准确率。", text: "At 9:30, Alex typed 120 words; accuracy was 98%.", status: "open" }
+  ],
+  advanced: [
+    { icon: "F1", title: "Function keys F1-F4", desc: "练习键盘顶部左侧功能键。", text: "F1 F2 F3 F4 F1 F2 F3 F4", keys: "F1 F2 F3 F4", status: "open", functionKeyLesson: true },
+    { icon: "F5", title: "Function keys F5-F8", desc: "练习键盘顶部中间功能键。", text: "F5 F6 F7 F8 F5 F6 F7 F8", keys: "F5 F6 F7 F8", status: "open", functionKeyLesson: true },
+    { icon: "F9", title: "Function keys F9-F12", desc: "练习键盘顶部右侧功能键。", text: "F9 F10 F11 F12 F9 F10 F11 F12", keys: "F9 F10 F11 F12", status: "open", functionKeyLesson: true },
+    { icon: "F12", title: "All function keys", desc: "整合练习 F1 到 F12。", text: "F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12", keys: "F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12", status: "open", functionKeyLesson: true },
+    { icon: "()[]", title: "Brackets", desc: "练习括号与方括号。", text: "(focus) [speed] {accuracy} (repeat)", status: "open" },
+    { icon: "</>", title: "Code punctuation", desc: "练习程序常用英文符号。", text: "const focus = speed => speed * accuracy;", status: "open" },
+    { icon: "$_", title: "Command symbols", desc: "练习命令行常用符号。", text: "npm run build -- --mode=prod && echo done", status: "open" },
+    { icon: "URL", title: "URL practice", desc: "练习网址输入。", text: "https://keypath.app/learn?level=advanced#rank", status: "open" },
+    { icon: "LONG", title: "Long text stamina", desc: "较长英文句子，训练耐力和稳定度。", text: "Great work is built one thoughtful keystroke at a time.", status: "open" },
+    { icon: "🏆", title: "Master challenge", desc: "综合英文、数字、标点与功能键。", text: "Accuracy 98%, speed 75 WPM; press F1 F5 F9 F12 to finish.", keys: "Accuracy98%,speed75WPM;pressF1F5F9F12tofinish.", status: "open" }
   ]
 };
 
